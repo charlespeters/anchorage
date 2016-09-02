@@ -28,20 +28,20 @@ class Anchorage {
       x.setAttribute('id', y)
     }
   }
-  
+
   // Creates Link Element
   element (y) {
     const ref = `#${y}`
     const elm = document.createElement('a')
     const t = document.createTextNode('link')
-    
+
     elm.appendChild(t)
     elm.setAttribute('href', ref)
     elm.setAttribute('class', 'small')
-    
+
     return elm
   }
-  
+
   // Appends Link Element
   link (x, y) {
     return x.appendChild(y)
