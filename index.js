@@ -12,6 +12,7 @@ class Anchorage {
     }
   }
 
+  // Collects All the Headlines
   headlines (x) {
     const cln = document.querySelector(x)
     const xh = cln.querySelectorAll('h1, h2, h3, h4, h5, h6')
@@ -19,10 +20,13 @@ class Anchorage {
     return xh
   }
 
+  // Creates the ID/reference
   parser (x) {
     let s = x.innerHTML
     return s.toLowerCase().replace(' ', '-')
   }
+
+  // Sets ID attribute
   setter (x, y) {
     if (!x.hasAttribute('id')) {
       x.setAttribute('id', y)
