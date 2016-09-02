@@ -1,0 +1,33 @@
+{
+  "name": "anchorage",
+  "version": "0.0.1",
+  "description": "Add anchor tags and ids to headlines",
+  "main": "index.js",
+  "browser": "dist/anchorage.min.js",
+  "scripts": {
+    "bundle": "babel index.js -o ./dist/anchorage.min.js",
+    "prepublish": "npm run bundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlespeters/anchorage.git"
+  },
+  "author": "charles peters <charlespeters42@gmail.com> (https://charlespeters.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlespeters/anchorage/issues"
+  },
+  "homepage": "https://github.com/charlespeters/anchorage#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-babili": "0.0.2",
+    "babel-preset-es2015": "^6.14.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "babili"
+    ]
+  }
+}
