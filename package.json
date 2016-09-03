@@ -1,6 +1,6 @@
 {
   "name": "anchorage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Add anchor tags and ids to headlines",
   "main": "index.js",
   "browser": "dist/anchorage.min.js",
