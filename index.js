@@ -1,5 +1,16 @@
 class Anchorage {
-  constructor (cn) {
+  constructor (cn, options = {}) {
+    // Defaults
+    const dft = {
+      linkClass: 'c-anchorage',
+      headlines: 'h1, h2, h3, h4, h5, h6'
+    }
+
+    this.options = {
+      linkClass: options.linkClass ? options.linkClass : dft.linkClass,
+      headlines: options.headlines ? options.headlines : dft.headlines
+    }
+
     const headlines = this.headlines(cn)
 
     for (let i = 0; i < headlines.length; i++) {
@@ -10,12 +21,14 @@ class Anchorage {
       this.setter(headlines[i], ref)
       this.link(headlines[i], this.element(headlines[i].getAttribute('id')))
     }
+
+    console.log(options)
   }
 
   // Collects All the Headlines
   headlines (x) {
     const cln = document.querySelector(x)
-    const xh = cln.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    const xh = cln.querySelectorAll(this.options.headlines)
 
     return xh
   }
@@ -41,7 +54,7 @@ class Anchorage {
 
     elm.appendChild(t)
     elm.setAttribute('href', ref)
-    elm.setAttribute('class', 'c-anchorage')
+    elm.setAttribute('class', this.options.linkClass)
 
     return elm
   }
