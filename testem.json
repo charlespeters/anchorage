@@ -1,0 +1,12 @@
+{
+  "after_tests": "npm run test:after",
+  "before_tests": "npm run test:before",
+  "framework": "tap",
+  "src_files": [
+    "index.js",
+    "test.js"
+  ],
+  "serve_files": [
+    "dist/test.js"
+  ]
+}
