@@ -9,7 +9,8 @@
     "prepublish": "npm run bundle",
     "test": "testem ci -P 5",
     "test:after": "rimraf dist/test.js",
-    "test:before": "webpack"
+    "test:before": "webpack",
+    "test:watch": "testem"
   },
   "repository": {
     "type": "git",

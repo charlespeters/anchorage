@@ -32,6 +32,11 @@ new Anchorage('.Post', {
 1. Clone the repository
 2. Run `npm install; npm run bundle`
 
+
+### Testing
+
+This project uses [testem](https://github.com/testem/testem) to run tests in your browser. Fire it up in CI mode using `npm test`. Alternatively, you can run `npm test:watch` and point your favorite browser to [http://localhost:7357](http://localhost:7357) to run in TDD mode.
+
 ## License
 
 MIT
