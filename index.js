@@ -8,7 +8,7 @@ class Anchorage {
       const ref = `${txt}-${count}`
 
       this.setter(headlines[i], ref)
-      this.link(headlines[i], this.element(ref))
+      this.link(headlines[i], this.element(headlines[i].getAttribute('id')))
     }
   }
 
@@ -37,11 +37,11 @@ class Anchorage {
   element (y) {
     const ref = `#${y}`
     const elm = document.createElement('a')
-    const t = document.createTextNode('link')
+    const t = document.createTextNode('Link')
 
     elm.appendChild(t)
     elm.setAttribute('href', ref)
-    elm.setAttribute('class', 'small')
+    elm.setAttribute('class', 'c-anchorage')
 
     return elm
   }
