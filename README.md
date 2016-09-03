@@ -15,7 +15,7 @@ npm i -S anchorage
 It takes at least one parameter of the selector you're wanting to apply Anchorage to:
 
 ```js
-new Anchorage('.Post')
+new Anchorage('.Post') // could be an ID, a class or an element
 ```
 
 If you want to apply Anchorage to only certain headline elements or apply a class to the new link being created you can pass in an object like this:
@@ -26,6 +26,11 @@ new Anchorage('.Post', {
   headlines: 'h1, h3, h6'
 })
 ```
+
+### Development
+
+1. Clone the repository
+2. Run `npm install; npm run bundle`
 
 ## License
 
