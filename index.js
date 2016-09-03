@@ -21,8 +21,6 @@ class Anchorage {
       this.setter(headlines[i], ref)
       this.link(headlines[i], this.element(headlines[i].getAttribute('id')))
     }
-
-    console.log(options)
   }
 
   // Collects All the Headlines
