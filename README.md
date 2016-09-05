@@ -1,6 +1,8 @@
 # Anchorage
 
-**VVWIP**
+<a href="https://github.com/charlespeters/VVWIP">
+  <img align="right" src="https://unpkg.com/vvwip/VVWIP.svg" alt="VVWIP" />
+</a>
 
 Automatically set the links and IDs of headlines inside an element so you can have internal page links to reference and share. This is a lightweight alternative of [Anchor.js](https://github.com/bryanbraun/anchorjs) using ES6 classes.
 
