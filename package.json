@@ -7,7 +7,10 @@
   "scripts": {
     "bundle": "babel index.js -o ./dist/anchorage.min.js",
     "prepublish": "npm run bundle",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testem ci -P 5",
+    "test:after": "rimraf dist/test.js",
+    "test:before": "webpack",
+    "test:watch": "testem"
   },
   "repository": {
     "type": "git",
@@ -21,8 +24,14 @@
   "homepage": "https://github.com/charlespeters/anchorage#readme",
   "devDependencies": {
     "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
     "babel-preset-babili": "0.0.2",
-    "babel-preset-es2015": "^6.14.0"
+    "babel-preset-es2015": "^6.14.0",
+    "rimraf": "^2.5.4",
+    "tape": "^4.6.0",
+    "testem": "^1.10.4",
+    "webpack": "^1.13.2"
   },
   "babel": {
     "presets": [
